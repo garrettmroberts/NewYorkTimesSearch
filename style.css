@@ -1,7 +1,37 @@
 .form-itself {
+    margin: 1em 7em 0 7em;
+}
+
+.jumbotron{
+    color: white;
+    text-align: center;
+}
+
+.fa-newspaper {
+    margin-right: .5em;
+}
+
+.fa-th {
+    margin-right: .5em;
+}
+
+#search-parameters, #top-articles {
+    background-color: blue;
+    color: white;
+    padding: .5em;
+}
+
+label {
     margin: .5em;
 }
 
-h1{
-    color: white;
+button {
+    margin: 1em;
+    padding: .5em;
+}
+
+.search-box, #top-articles {
+    border-bottom: .5em solid blue;
+    border-right: .5em solid blue;
+    border-left: .5em solid blue;
 }
