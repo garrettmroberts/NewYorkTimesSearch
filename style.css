@@ -5,7 +5,6 @@
 .jumbotron{
     color: white;
     text-align: center;
-
     border-radius: .5em;
     background-color: #000080;
 }
@@ -32,16 +31,22 @@ label {
 input {
     margin-left: .5em;
     width: 98.5%;
+    padding: .6em;
+    
 }
 
 button {
-    margin: 1em;
+    margin: 1em .2em 1em .5em;
     padding: .5em;
     display: inline-block;
+    background-color: grey;
+    color: white;
+    border-radius: .5em;
 }
 
 .search-box, #top-articles {
-    border-bottom: .5em solid #000080;
-    border-right: .5em solid #000080;
-    border-left: .5em solid #000080;
+    border-bottom: .2em solid #000080;
+    border-right: .2em solid #000080;
+    border-left: .2em solid #000080;
+    border-radius: .5em;
 }
