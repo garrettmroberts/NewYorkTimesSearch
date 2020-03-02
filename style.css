@@ -5,6 +5,9 @@
 .jumbotron{
     color: white;
     text-align: center;
+
+    border-radius: .5em;
+    background-color: #000080;
 }
 
 .fa-newspaper {
@@ -23,11 +26,18 @@
 
 label {
     margin: .5em;
+    display: block;
+}
+
+input {
+    margin-left: .5em;
+    width: 98.5%;
 }
 
 button {
     margin: 1em;
     padding: .5em;
+    display: inline-block;
 }
 
 .search-box, #top-articles {
