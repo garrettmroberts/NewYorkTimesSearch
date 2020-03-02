@@ -1,7 +1,47 @@
 .form-itself {
-    margin: .5em;
+    margin: 1em 7em 0 7em;
 }
 
-h1{
+.jumbotron{
     color: white;
+    text-align: center;
+
+    border-radius: .5em;
+    background-color: #000080;
+}
+
+.fa-newspaper {
+    margin-right: .5em;
+}
+
+.fa-th {
+    margin-right: .5em;
+}
+
+#search-parameters, #top-articles {
+    background-color: #000080;
+    color: white;
+    padding: .5em;
+}
+
+label {
+    margin: .5em;
+    display: block;
+}
+
+input {
+    margin-left: .5em;
+    width: 98.5%;
+}
+
+button {
+    margin: 1em;
+    padding: .5em;
+    display: inline-block;
+}
+
+.search-box, #top-articles {
+    border-bottom: .5em solid #000080;
+    border-right: .5em solid #000080;
+    border-left: .5em solid #000080;
 }
