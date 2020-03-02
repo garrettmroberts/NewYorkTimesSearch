@@ -5,6 +5,9 @@
 .jumbotron{
     color: white;
     text-align: center;
+
+    border-radius: .5em;
+    background-color: #000080;
 }
 
 .fa-newspaper {
@@ -16,22 +19,32 @@
 }
 
 #search-parameters, #top-articles {
-    background-color: blue;
+
+    background-color: #000080;
+
     color: white;
     padding: .5em;
 }
 
 label {
     margin: .5em;
+    display: block;
+}
+
+input {
+    margin-left: .5em;
+    width: 98.5%;
 }
 
 button {
     margin: 1em;
     padding: .5em;
+    display: inline-block;
 }
 
 .search-box, #top-articles {
-    border-bottom: .5em solid blue;
-    border-right: .5em solid blue;
-    border-left: .5em solid blue;
+    border-bottom: .2em solid #000080;
+    border-right: .2em solid #000080;
+    border-left: .2em solid #000080;
+    border-radius: .5em;
 }
