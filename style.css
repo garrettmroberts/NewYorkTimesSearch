@@ -16,7 +16,7 @@
 }
 
 #search-parameters, #top-articles {
-    background-color: blue;
+    background-color: #000080;
     color: white;
     padding: .5em;
 }
@@ -31,7 +31,7 @@ button {
 }
 
 .search-box, #top-articles {
-    border-bottom: .5em solid blue;
-    border-right: .5em solid blue;
-    border-left: .5em solid blue;
+    border-bottom: .5em solid #000080;
+    border-right: .5em solid #000080;
+    border-left: .5em solid #000080;
 }
