@@ -5,9 +5,9 @@
 .jumbotron{
     color: white;
     text-align: center;
+
     border-radius: .5em;
     background-color: #000080;
-
 }
 
 .fa-newspaper {
@@ -19,7 +19,9 @@
 }
 
 #search-parameters, #top-articles {
+
     background-color: #000080;
+
     color: white;
     padding: .5em;
 }
