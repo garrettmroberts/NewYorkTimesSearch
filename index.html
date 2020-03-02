@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+        <link rel="stylesheet" href="style.css"/>
     <title>Document</title>
 </head>
 <body>
-    <div style="background: blue" class="jumbotron">
-        <i class="fas fa-newspaper"></i>    
-        <h1 class="display-4">New York Times Search</h1>
-      </div>
     <!-- <h1>New York Times Search</h1> -->
+    <div class="form-itself">
     <form>
-        <div id="search-parameters">Search Parameters
+        <div style="background: blue" class="jumbotron">
+            <h1 class="display-4"><i class="fas fa-newspaper"></i>New York Times Search</h1>
+          </div>
+        <div id="search-parameters"> Search Parameters
             <label id="search-term" for="search-term">Search Term</label>
             <input type="text" value="search-term"/>
             <label id="number-received" for="number-received">Number of Records to Retrieve</label>
@@ -33,6 +34,7 @@
             </button>
         </div>
     </form>
+    </div>
     <div id="top-articles"><i class="fas fa-th"></i>Top Articles</div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
