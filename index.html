@@ -8,13 +8,21 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>New York Times Search</h1>
     <form>
+        <label id="search-term" for="search-term">Search Parameters</label>
         <input type="text" value="search-term"/>
         <input type="number" value="number-received" placeholder="5" min="1" max="10"/>
+        <label id="start-year" for="start-year">Start Year (Optional)</label>
         <input type="text" value="start-year"/>
-        <label id="end-year" for="end-year"></label>
+        <label id="end-year" for="end-year">End Year (Optional)</label>
         <input type="text" value="end-year"/>
-        <input type="text" value="search-term"/>
+        <button id="search">
+            Search
+        </button>
+        <button id="clear">
+            Clear Results
+        </button>
     </form>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
