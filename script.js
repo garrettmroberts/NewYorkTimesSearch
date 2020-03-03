@@ -26,7 +26,7 @@ function processUserInput() {
   
 };
 
-
+// &facet_field=day_of_week&facet=true&begin_date=20120101&end_date=20120101
 // Requests info via queryURL
 function requestInfo() {
   
@@ -35,13 +35,24 @@ function requestInfo() {
   
   // For Loop updates page # for each ajax call
   for (var i = 0; i < repeatAjaxTimes; i++) {
-    queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearchQuery + "&page=" + i + repeatAjaxTimes + "&api-key=C7QhoZeFxrd3ER1grZm6qFmXBQ6ig2Jl"
+
+    // Creates query URL if user doesn't specify a begin or end year
+    if (userStartYear === "") {
+      queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearchQuery + "&page=" + i + "&api-key=C7QhoZeFxrd3ER1grZm6qFmXBQ6ig2Jl";
+
+      // Formats queryURL with a start and end year
+    } else {
+      var formattedStartYear = userStartYear.toString() + "0101";
+      var formattedEndYear = userEndYear.toString() + "0101";
+      
+      queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearchQuery + "&page=" + i + "&begin_date=" + formattedStartYear + "&end_date=" + formattedEndYear + "&api-key=C7QhoZeFxrd3ER1grZm6qFmXBQ6ig2Jl";
+    }
     console.log(queryURL)
     $.ajax({
       url: queryURL,
       method: 'GET'
     }).then(function(res) {
-  
+      console.log(res)
       // Makes function call to update page with search results
       updateResults(res);
     }); 
