@@ -1,7 +1,9 @@
 
+var queryURL;
 var userSearchQuery;
 var userResultsLimit;
-var queryURL;
+var userStartYear;
+var userEndYear;
 
 // Creates onClick Event for Submit Button to update page w/ search results
 $("#search").on("click", function(event) {
@@ -13,10 +15,15 @@ $("#search").on("click", function(event) {
 // Processes input updates queryURL
 function processUserInput() {
 
-  // Creates queryURL for ajax request
+  // creates variables for the queryURL
   userSearchQuery = $("#search-term").val();
   userResultsLimit = $("#number-received").val();
-  queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearchQuery + "&limit=" + userResultsLimit + "&api-key=C7QhoZeFxrd3ER1grZm6qFmXBQ6ig2Jl"
+  userStartYear = $("#start-year").val();
+  userEndYear = $("#end-year").val();
+
+
+  // Creates queryURL for ajax request
+  queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearchQuery + "&api-key=C7QhoZeFxrd3ER1grZm6qFmXBQ6ig2Jl"
   console.log(queryURL)
 
   // Calls function that sends the ajax request
@@ -25,6 +32,7 @@ function processUserInput() {
 };
 
 // Requests info via queryURL
+// We need to call this function x number of times to get everyhting the user requested.  We can do this by setting offset=x for each call.
 function requestInfo() {
   $.ajax({
     url: queryURL,
