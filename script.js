@@ -51,16 +51,17 @@ function requestInfo() {
 // Updates html w/ Search results
 function updateResults(res) {
   var articles = res.response.docs;
-  
+  console.log(articles)
   // ForEach loop creates new article sections for HTML and appends to results
   articles.forEach(function(article) {
-
     // New articles are added to list only if number of articles is less than the user's limit
     if ($("article").length < userResultsLimit) {
       var resultDiv = $("<article>");
+      var titleLink = $("<a>").attr("href", article.web_url);
       var title = $("<h2>").text(article.headline.main);
+      titleLink.append(title);
       var snippet = $("<p>").text(article.lead_paragraph);
-      resultDiv.prepend(title, snippet);
+      resultDiv.prepend(titleLink, snippet);
       $("#top-articles").append(resultDiv);
     };
   });
